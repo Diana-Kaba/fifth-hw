@@ -1,0 +1,14 @@
+<h1>Budget phones</h1>
+<div *ngIf="currentDescr" class="descr">
+    <p>{{ currentDescr }}</p>
+</div>
+
+<div class="products">
+    <app-card-block [phone]="product" [discount]="isDiscount" (newPhoneEvent)="addDescr($event)" *ngFor="let product of products">
+        <b #colorTag>{{product.color}}</b>
+    </app-card-block>
+</div>
+
+<div class="discount">
+    <button (click)="switchDiscount()" [disabled]="isDiscount">Apply discount</button>
+</div>

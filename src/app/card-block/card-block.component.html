@@ -1,0 +1,7 @@
+<div class="product">
+    <h2>№ {{ phone.id }}</h2>
+    <h2>{{ phone.name }}</h2>
+    <span>Price: &dollar;{{ getDiscountedPrice() }}</span>
+    <span>Color: <ng-content></ng-content></span>
+    <button (click)="getPhoneById()">More info</button>
+</div>
